@@ -6,18 +6,18 @@ from sqlalchemy import create_engine
 Base = declarative_base()
 
 class Knowledge(Base):
-	__tablename__ = 'Wikipedia'
-	wiki_id = Column(Integer, primary_key=True)
-   	title = Column(String)
-   	topic = Column(String)
-   	rating = Column(Integer)
+    __tablename__ = 'Wikipedia'
+    wiki_id = Column(Integer, primary_key=True)
+    title = Column(String)
+    topic = Column(String)
+    rating = Column(Integer)
 
-   	   def __repr__(self):
-       return ("title: {}\n"
+    def __repr__(self):
+        return ("title: {}\n"
                "topic: {} \n"
                "rating: {} \n"
                "wiki_id: {}").format(
-                    self.title, self.rating, self.wiki_id)
+                    self.title, self.topic, self.rating, self.wiki_id)
 	# Create a table with 4 columns
 	# The first column will be the primary key
 	# The second column should be a string representing
@@ -26,4 +26,4 @@ class Knowledge(Base):
 	# topic of the article. The last column will be
 	# an integer, representing your rating of the article.
 Minecraft = Knowledge(wiki_id="1", title="Minecraft", topic="video game", rating="9")
-print(M inecraft)
+print(Minecraft)
